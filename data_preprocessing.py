@@ -11,6 +11,7 @@ class GeotiffImageManipulator:
 
 	def divide(self, length_offset=500):
 		for data_folder_name in self.data_folders_list:
+			print('In folder', data_folder_name)
 			image_name = os.listdir(self.DATA_DIR + os.sep + data_folder_name)[0]
 			text_name = os.listdir(self.DATA_DIR + os.sep + data_folder_name)[1]
 
@@ -30,9 +31,7 @@ class GeotiffImageManipulator:
 
 					print(min_x, min_y, max_x, max_y)
 					new_file_name = image_name[0:-4] + '_' + str(min_x) + '_' + str(min_y) + '_' + str(max_x) + '_' + str(max_y) + '.jpg'
-					cv2.imshow(self.DATA_DIR + os.sep + data_folder_name + os.sep + new_file_name, image[min_x:max_x, min_y:max_y, 3:4])
-					cv2.waitKey(0)
-					break
+					Image.fromarray(image[min_x:max_x, min_y:max_y, 0:4]).save(self.DATA_DIR + os.sep + data_folder_name + os.sep + new_file_name)
 					min_x -= int(length_offset/2)
 					max_x -= int(length_offset/2)
 
@@ -40,7 +39,6 @@ class GeotiffImageManipulator:
 				max_y -= int(length_offset/2)
 				min_x = 0
 				max_x = 0
-
 
 
 DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
