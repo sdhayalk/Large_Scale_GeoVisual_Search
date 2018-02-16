@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 import os
 
 from PIL import Image
@@ -28,7 +29,10 @@ class GeotiffImageManipulator:
 					max_x += length_offset
 
 					print(min_x, min_y, max_x, max_y)
-
+					new_file_name = image_name[0:-4] + '_' + str(min_x) + '_' + str(min_y) + '_' + str(max_x) + '_' + str(max_y) + '.jpg'
+					cv2.imshow(self.DATA_DIR + os.sep + data_folder_name + os.sep + new_file_name, image[min_x:max_x, min_y:max_y, 1:4])
+					cv2.waitKey(0)
+					break
 					min_x -= int(length_offset/2)
 					max_x -= int(length_offset/2)
 
