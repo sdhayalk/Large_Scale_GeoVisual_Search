@@ -1,1 +1,1 @@
-# Large_Scale_GeoVisual_Search
+# Large Scale GeoVisual Search
