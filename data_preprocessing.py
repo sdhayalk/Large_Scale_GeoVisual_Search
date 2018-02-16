@@ -13,11 +13,11 @@ class GeotiffImageManipulator:
 		self.DATA_DIR = DATA_DIR
 		self.data_folders_list = os.listdir(self.DATA_DIR)
 
-	def divide(self, length_offset=500):
+	def divide(self, length_offset=128):
 		'''funtion that slides a window of dimension length_offset x length_offset with a stride of length_offset/2
 		   and saves the resultant image in the window in the corresponding folder.
 		Keyword Arguments:
-			length_offset {number} -- dimension of the divided image (same across length and height) (default: {500})
+			length_offset {number} -- dimension of the divided image (same across length and height) (default: {128})
 		'''
 		for data_folder_name in self.data_folders_list:
 			print('In folder', data_folder_name)
@@ -48,11 +48,24 @@ class GeotiffImageManipulator:
 				min_x = 0
 				max_x = 0
 
+	def delete_images(self):
+		'''This function deletes all .jpg images in folders of root data directory.
+		   This function can be useful if you want to recalculate and redivide images
+		'''
+		for data_folder_name in self.data_folders_list:
+			files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
+			print('deleting .jpg files in folder', data_folder_name)
+			for file in files:
+				if '.jpg' in file:
+					os.remove(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
+
+
 
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	geotiff_image_manipulator_instance = GeotiffImageManipulator(DATA_DIR)
-	geotiff_image_manipulator_instance.divide(length_offset=500)
+	geotiff_image_manipulator_instance.delete_images()
+	geotiff_image_manipulator_instance.divide(length_offset=128)
 
 
 if __name__ == '__main__':
