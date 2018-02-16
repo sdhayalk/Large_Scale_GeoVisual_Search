@@ -64,7 +64,7 @@ class GeotiffImageManipulator:
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	geotiff_image_manipulator_instance = GeotiffImageManipulator(DATA_DIR)
-	geotiff_image_manipulator_instance.delete_images()
+	# geotiff_image_manipulator_instance.delete_images()
 	geotiff_image_manipulator_instance.divide(length_offset=128)
 
 
