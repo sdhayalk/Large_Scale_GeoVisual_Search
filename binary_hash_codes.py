@@ -2,7 +2,11 @@ import caffe
 
 
 def main():
-	pass
+	caffe.set_device(0)
+	caffe.set_mode_gpu()
+
+	
+
 
 
 if __name__ == '__main__':
