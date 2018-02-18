@@ -4470,55 +4470,6 @@ layer {
 
 layer {
 	bottom: "res5c_branch2b"
-	top: "res5c_branch2c"
-	name: "res5c_branch2c"
-	type: "Convolution"
-	convolution_param {
-		num_output: 2048
-		kernel_size: 1
-		pad: 0
-		stride: 1
-		bias_term: false
-	}
-}
-
-layer {
-	bottom: "res5c_branch2c"
-	top: "res5c_branch2c"
-	name: "bn5c_branch2c"
-	type: "BatchNorm"
-	batch_norm_param {
-		use_global_stats: true
-	}
-}
-
-layer {
-	bottom: "res5c_branch2c"
-	top: "res5c_branch2c"
-	name: "scale5c_branch2c"
-	type: "Scale"
-	scale_param {
-		bias_term: true
-	}
-}
-
-layer {
-	bottom: "res5b"
-	bottom: "res5c_branch2c"
-	top: "res5c"
-	name: "res5c"
-	type: "Eltwise"
-}
-
-layer {
-	bottom: "res5c"
-	top: "res5c"
-	name: "res5c_relu"
-	type: "ReLU"
-}
-
-layer {
-	bottom: "res5c"
 	top: "pool5"
 	name: "pool5"
 	type: "Pooling"
@@ -4531,18 +4482,8 @@ layer {
 
 layer {
 	bottom: "pool5"
-	top: "fc1000"
-	name: "fc1000"
-	type: "InnerProduct"
-	inner_product_param {
-		num_output: 1000
-	}
-}
-
-layer {
-	bottom: "fc1000"
 	top: "prob"
 	name: "prob"
-	type: "Softmax"
+	type: "Sigmoid"
 }
 

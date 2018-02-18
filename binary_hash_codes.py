@@ -18,7 +18,7 @@ class Model:
 
 def main():
 
-	CNN_NETWORK_PATH = "ResNet-101-deploy.prototxt"
+	CNN_NETWORK_PATH = "ResNet-101-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
 	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel"
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, USE_GPU=True)
