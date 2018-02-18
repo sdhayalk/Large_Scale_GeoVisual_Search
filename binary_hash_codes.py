@@ -1,17 +1,27 @@
 import caffe
 
 
+class Model:
+
+	def __init__(self, CNN_NETWORK_PATH, CAFFEMODEL_PATH, USE_GPU=False):
+		self.CNN_NETWORK_PATH = CNN_NETWORK_PATH
+		self.CAFFEMODEL_PATH = CAFFEMODEL_PATH
+
+		if USE_GPU:
+			caffe.set_device(0)
+			caffe.set_mode_gpu()
+		else:
+			caffe.set_mode_cpu()
+
+		self.net = caffe.Net(self.CNN_NETWORK_PATH, self.CAFFEMODEL_PATH, caffe.TEST)
+
+
 def main():
-	USE_GPU = True
-	if USE_GPU:
-	    caffe.set_device(0)
-	    caffe.set_mode_gpu()
-	else:
-	    caffe.set_mode_cpu()
 
 	CNN_NETWORK_PATH = "ResNet-101-deploy.prototxt"
 	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel"
-	net = caffe.Net(CNN_NETWORK_PATH, CAFFEMODEL_PATH, caffe.TEST)
+
+	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, USE_GPU=True)
 
 
 if __name__ == '__main__':
