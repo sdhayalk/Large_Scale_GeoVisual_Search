@@ -19,6 +19,22 @@ class Model:
 		self.net = caffe.Net(self.CNN_NETWORK_PATH, self.CAFFEMODEL_PATH, caffe.TEST)
 
 
+	def read_image_from_path(self, image_path):
+		image = np.array(Image.open(image_path))
+		image = cv2.resize(image, (224, 224))
+		# image = image - 113.0
+		# image = image / 255.0
+		return image.reshape(1, 3, 224, 224)
+
+
+	def test(self, image_path):
+		image = self.read_image_from_path(image_path)
+		output = self.net.forward(data=image)
+		output = np.array(output['prob'])
+		for arr in output[0]:
+			print(arr)
+		print(output.shape)
+
 
 def main():
 
