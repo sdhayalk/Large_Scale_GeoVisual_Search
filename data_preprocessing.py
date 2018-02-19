@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import os
+import h5py
 
 from PIL import Image
 
@@ -60,13 +61,35 @@ class GeotiffImageManipulator:
 					os.remove(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
 
 
+def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
+	dataset_train_features = []
+
+	for data_folder_name in os.listdir(data_dir):
+		print('In folder', data_folder_name)
+		for file_name in os.listdir(data_dir + os.sep + data_folder_name):
+			if '.jpg' in file_name:
+				print(file_name)
+				image_name = data_dir + os.sep + data_folder_name + os.sep + file_name
+				image = np.array(Image.open(image_name))
+				dataset_train_features.append(image)
+
+	dataset_train_features = np.array(dataset_train_features).reshape((len(dataset_train_features), 3, length_offset, length_offset))
+	
+	with h5py.File(hdf5_train_filename, 'w') as f:
+		f['data'] = dataset_train_features
+		f['label'] = dataset_train_features
+
 
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
+	length_offset = 128
+
 	geotiff_image_manipulator_instance = GeotiffImageManipulator(DATA_DIR)
 	# geotiff_image_manipulator_instance.delete_images()
-	geotiff_image_manipulator_instance.divide(length_offset=128)
+	# geotiff_image_manipulator_instance.divide(length_offset=length_offset)
 
+	DATASET_TRAIN_HDF5_PATH = DATA_DIR + os.sep + 'dataset_train.hdf5'
+	convert_to_HDF5(DATASET_TRAIN_HDF5_PATH, DATA_DIR, length_offset)
 
 if __name__ == '__main__':
 	main()
