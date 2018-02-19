@@ -30,22 +30,33 @@ class Model:
 		return image.reshape(1, 3, 224, 224)
 
 
-	def test(self):
-		for data_folder_name in self.data_folders_list[0:1]:
-			files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
-			print('forward pass of .jpg files in folder', data_folder_name)
+	def test(self, write_to_file=False):
+		with open('binary_codes.txt','w') as f:
+			for data_folder_name in self.data_folders_list[0:1]:
+				files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
+				print('forward pass of .jpg files in folder', data_folder_name)
 
-			for file in files[0:3]:
-				print(file)
-				if '.jpg' in file:
-					image = self.read_image_from_path(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
-					output = self.net.forward(data=image)
-					output = np.array(output['prob'])
+				for file in files[0:5]:
+					if '.jpg' in file:
+						image = self.read_image_from_path(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
+						output = self.net.forward(data=image)
+						output = np.array(output['prob'])
 
-					# for arr in output[0]:
-						# print(arr[0][0])
-					# print(output.shape)
-					
+						# for arr in output[0]:
+							# print(arr[0][0])
+						# print(output.shape)
+
+						code = ""
+						for arr in output[0]:
+							if arr[0][0] >= 0.5:
+								code = code + '1'
+							else:
+								code = code + '0'
+
+						f.write(code + ',' + file)
+						f.write('\n')
+
+			f.close()
 
 
 def main():
