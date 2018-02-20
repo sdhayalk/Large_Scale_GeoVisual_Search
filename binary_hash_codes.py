@@ -27,34 +27,49 @@ class Model:
 		image = cv2.resize(image, (224, 224))
 		# image = image - 113.0
 		# image = image / 255.0
-		return image.reshape(1, 3, 224, 224)
+		return image.reshape(3, 224, 224)
 
 
-	def test(self, write_to_file=False):
+	def test(self, batch_size):
 		with open('binary_codes.txt','w') as f:
-			for data_folder_name in self.data_folders_list[0:1]:
+			for data_folder_name in self.data_folders_list:
 				files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
 				print('forward pass of .jpg files in folder', data_folder_name)
 
-				for file in files[0:5]:
+				batch_counter = 0
+				batch_image = []
+				batch_file = []
+
+				for file in files:
 					if '.jpg' in file:
 						image = self.read_image_from_path(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
-						output = self.net.forward(data=image)
-						output = np.array(output['prob'])
+						batch_image.append(image)
+						batch_file.append(file)
+						batch_counter += 1
 
-						# for arr in output[0]:
-							# print(arr[0][0])
-						# print(output.shape)
+						if batch_counter == batch_size:
+							batch_image = np.array(batch_image)
+							output = self.net.forward(data=batch_image)
+							output = np.array(output['prob'])
 
-						code = ""
-						for arr in output[0]:
-							if arr[0][0] >= 0.5:
-								code = code + '1'
-							else:
-								code = code + '0'
+							# for arr in output:
+								# print(arr)
+							# print(output.shape)
 
-						f.write(code + ',' + file)
-						f.write('\n')
+							for i in range(0, len(output)):
+								code = ""
+								for arr in output[i]:
+									if arr[0][0] >= 0.5:
+										code = code + '1'
+									else:
+										code = code + '0'
+
+								f.write(code + ',' + batch_file[i])
+								f.write('\n')
+
+							batch_counter = 0
+							batch_image = []
+							batch_file = []
 
 			f.close()
 
@@ -65,7 +80,7 @@ def main():
 	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel"
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
-	model.test()
+	model.test(8)
 
 
 if __name__ == '__main__':
