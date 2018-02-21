@@ -1,9 +1,18 @@
 name: "ResNet-101"
-input: "data"
-input_dim: 8
-input_dim: 3
-input_dim: 224
-input_dim: 224
+
+layer {
+  name: "geodata"
+  type: "HDF5Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  hdf5_data_param {
+    source: "CHANGE THIS"
+    batch_size: 1
+  }
+}
 
 layer {
 	bottom: "data"
