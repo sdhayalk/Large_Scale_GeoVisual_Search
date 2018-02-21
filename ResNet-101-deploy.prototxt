@@ -2784,10 +2784,7 @@ layer {
 	}
 }
 
-layer {
-	bottom: "pool5"
-	top: "prob"
-	name: "prob"
-	type: "TanH"
-}
+
+
+
 
