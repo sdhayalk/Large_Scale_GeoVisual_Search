@@ -86,10 +86,10 @@ def main():
 
 	geotiff_image_manipulator_instance = GeotiffImageManipulator(DATA_DIR)
 	# geotiff_image_manipulator_instance.delete_images()
-	# geotiff_image_manipulator_instance.divide(length_offset=length_offset)
+	geotiff_image_manipulator_instance.divide(length_offset=length_offset)
 
 	DATASET_TRAIN_HDF5_PATH = DATA_DIR + os.sep + 'dataset_train.hdf5'
-	convert_to_HDF5(DATASET_TRAIN_HDF5_PATH, DATA_DIR, length_offset)
+	# convert_to_HDF5(DATASET_TRAIN_HDF5_PATH, DATA_DIR, length_offset)
 
 if __name__ == '__main__':
 	main()

@@ -2785,6 +2785,68 @@ layer {
 }
 
 
+layer {
+	name: "appended_conv1"
+	type: "Convolution"
+	bottom: "pool5"
+	top: "appended_conv1"
+	convolution_param {
+		num_output: 512
+		kernel_size: 1
+		stride: 1
+		weight_filler {
+	  		type: "xavier"
+		}
+		bias_filler {
+	  		type: "constant"
+		}
+	}
+}
+
+layer {
+	name: "appended_deconv1"
+	type: "Deconvolution"
+	bottom: "appended_conv1"
+	top: "appended_deconv1"
+	convolution_param {
+		num_output: 256
+		pad: 1
+		stride: 3
+		kernel_size: 5
+		group: 1
+		weight_filler {
+	  		type: "xavier"
+		}
+		bias_filler {
+	  		type: "constant"
+		}
+	}
+}
+
+layer {
+  name: "relu5t"
+  type: "ReLU"
+  bottom: "appended_deconv1"
+  top: "appended_deconv1"
+}
 
 
-
+layer {
+	name: "appended_deconv2"
+	type: "Deconvolution"
+	bottom: "appended_deconv1"
+	top: "appended_deconv2"
+	convolution_param {
+		num_output: 128
+		pad: 1
+		stride: 3
+		kernel_size: 5
+		group: 1
+		weight_filler {
+	  		type: "xavier"
+		}
+		bias_filler {
+	  		type: "constant"
+		}
+	}
+}

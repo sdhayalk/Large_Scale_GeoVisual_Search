@@ -40,7 +40,7 @@ class Model:
 				batch_image = []
 				batch_file = []
 
-				for file in files:
+				for file in files[0:12]:
 					if '.jpg' in file:
 						image = self.read_image_from_path(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
 						batch_image.append(image)
@@ -50,8 +50,8 @@ class Model:
 						if batch_counter == batch_size:
 							batch_image = np.array(batch_image)
 							output = self.net.forward(data=batch_image)
-							output = np.array(output['prob'])
-
+							output = np.array(output['appended_deconv2'])
+							print(output.shape)
 							# for arr in output:
 								# print(arr)
 							# print(output.shape)
