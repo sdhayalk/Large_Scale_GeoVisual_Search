@@ -2824,7 +2824,7 @@ layer {
 }
 
 layer {
-  name: "relu5t"
+  name: "appended_relu1"
   type: "ReLU"
   bottom: "appended_deconv1"
   top: "appended_deconv1"
@@ -2837,10 +2837,66 @@ layer {
 	bottom: "appended_deconv1"
 	top: "appended_deconv2"
 	convolution_param {
-		num_output: 128
+		num_output: 64
 		pad: 1
 		stride: 3
 		kernel_size: 5
+		group: 1
+		weight_filler {
+	  		type: "xavier"
+		}
+		bias_filler {
+	  		type: "constant"
+		}
+	}
+}
+
+layer {
+  name: "appended_relu2"
+  type: "ReLU"
+  bottom: "appended_deconv2"
+  top: "appended_deconv2"
+}
+
+
+layer {
+	name: "appended_deconv3"
+	type: "Deconvolution"
+	bottom: "appended_deconv2"
+	top: "appended_deconv3"
+	convolution_param {
+		num_output: 16
+		pad: 2
+		stride: 4
+		kernel_size: 4
+		group: 1
+		weight_filler {
+	  		type: "xavier"
+		}
+		bias_filler {
+	  		type: "constant"
+		}
+	}
+}
+
+layer {
+  name: "appended_relu3"
+  type: "ReLU"
+  bottom: "appended_deconv3"
+  top: "appended_deconv3"
+}
+
+
+layer {
+	name: "appended_deconv4"
+	type: "Deconvolution"
+	bottom: "appended_deconv3"
+	top: "appended_deconv4"
+	convolution_param {
+		num_output: 3
+		pad: 0
+		stride: 4
+		kernel_size: 4
 		group: 1
 		weight_filler {
 	  		type: "xavier"

@@ -50,7 +50,7 @@ class Model:
 						if batch_counter == batch_size:
 							batch_image = np.array(batch_image)
 							output = self.net.forward(data=batch_image)
-							output = np.array(output['appended_deconv2'])
+							output = np.array(output['appended_deconv4'])
 							print(output.shape)
 							# for arr in output:
 								# print(arr)
