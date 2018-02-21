@@ -62,7 +62,7 @@ class GeotiffImageManipulator:
 
 
 def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
-	dataset_train_features = []
+	dataset_train = []
 
 	for data_folder_name in os.listdir(data_dir):
 		print('In folder', data_folder_name)
@@ -71,13 +71,14 @@ def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
 				print(file_name)
 				image_name = data_dir + os.sep + data_folder_name + os.sep + file_name
 				image = np.array(Image.open(image_name))
-				dataset_train_features.append(image)
+				dataset_train.append(image)
 
-	dataset_train_features = np.array(dataset_train_features).reshape((len(dataset_train_features), 3, length_offset, length_offset))
+	dataset_train_features = np.array(dataset_train).reshape((len(dataset_train), 3, 224, 224))
+	dataset_train_labels = np.array(dataset_train).reshape((len(dataset_train), 3, length_offset, length_offset))
 	
 	with h5py.File(hdf5_train_filename, 'w') as f:
 		f['data'] = dataset_train_features
-		f['label'] = dataset_train_features
+		f['label'] = dataset_train_labels
 
 
 def main():
