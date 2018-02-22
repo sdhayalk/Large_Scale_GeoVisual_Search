@@ -25,14 +25,14 @@ class Model:
 	def read_image_from_path(self, image_path):
 		image = np.array(Image.open(image_path))
 		image = cv2.resize(image, (224, 224))
-		# image = image - 113.0
-		# image = image / 255.0
+		image = image - 112.0
+		image = image / 255.0
 		return image.reshape(3, 224, 224)
 
 
 	def test(self, batch_size):
 		with open('binary_codes.txt','w') as f:
-			for data_folder_name in self.data_folders_list:
+			for data_folder_name in self.data_folders_list[1:]:
 				files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
 				print('forward pass of .jpg files in folder', data_folder_name)
 
@@ -50,8 +50,8 @@ class Model:
 						if batch_counter == batch_size:
 							batch_image = np.array(batch_image)
 							output = self.net.forward(data=batch_image)
-							output = np.array(output['appended_deconv4'])
-							print(output.shape)
+							output = np.array(output['pool5'])
+							print(output)
 							# for arr in output:
 								# print(arr)
 							# print(output.shape)
@@ -77,7 +77,7 @@ class Model:
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	CNN_NETWORK_PATH = "ResNet-101-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
-	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel"
+	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/snapshot_iter_90.caffemodel"
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
 	model.test(8)

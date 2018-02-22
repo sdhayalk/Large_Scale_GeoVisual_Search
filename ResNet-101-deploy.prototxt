@@ -17,6 +17,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -27,6 +28,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -37,6 +39,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -70,6 +73,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -80,6 +84,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -90,6 +95,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -104,6 +110,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -114,6 +121,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -124,6 +132,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -145,6 +154,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -155,6 +165,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -165,6 +176,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -186,6 +198,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -196,6 +209,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -206,6 +220,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -235,6 +250,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -245,6 +261,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -255,6 +272,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -276,6 +294,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -286,6 +305,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -296,6 +316,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -317,6 +338,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -327,6 +349,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -337,6 +360,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -366,6 +390,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -376,6 +401,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -386,6 +412,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -407,6 +434,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -427,6 +455,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -448,6 +477,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -458,6 +488,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -468,6 +499,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -476,6 +508,7 @@ layer {
 	top: "res2c"
 	name: "res2c"
 	type: "Eltwise"
+
 }
 
 layer {
@@ -497,6 +530,8 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	
+
 }
 
 layer {
@@ -507,6 +542,8 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
+
 }
 
 layer {
@@ -517,6 +554,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -531,6 +569,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -541,6 +580,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -551,6 +591,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -572,6 +613,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -582,6 +624,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -592,6 +635,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -613,6 +657,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -623,6 +668,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -633,6 +679,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -662,6 +709,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -672,6 +720,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -682,6 +731,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -703,6 +753,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -713,6 +764,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -723,6 +775,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -744,6 +797,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -754,6 +808,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -764,6 +819,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -793,6 +849,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -803,6 +860,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -813,6 +871,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -834,6 +893,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -844,6 +904,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -854,6 +915,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -875,6 +937,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -885,6 +948,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -895,6 +959,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -924,6 +989,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -934,6 +1000,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -944,6 +1011,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -965,6 +1033,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -975,6 +1044,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -985,6 +1055,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1006,6 +1077,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1016,6 +1088,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1026,6 +1099,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1055,6 +1129,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1065,6 +1140,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1075,6 +1151,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1089,6 +1166,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1099,6 +1177,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1109,6 +1188,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1130,6 +1210,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1140,6 +1221,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1150,6 +1232,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1171,6 +1254,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1181,6 +1265,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1191,6 +1276,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1220,6 +1306,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1230,6 +1317,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1240,6 +1328,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1261,6 +1350,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1271,6 +1361,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1281,6 +1372,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1302,6 +1394,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1312,6 +1405,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1322,6 +1416,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1351,6 +1446,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1361,6 +1457,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1371,6 +1468,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1392,6 +1490,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1402,6 +1501,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1412,6 +1512,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1433,6 +1534,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1443,6 +1545,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1453,6 +1556,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1482,6 +1586,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1492,6 +1597,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1502,6 +1608,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1523,6 +1630,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1533,6 +1641,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1543,6 +1652,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1564,6 +1674,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1574,6 +1685,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1584,6 +1696,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1613,6 +1726,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1623,6 +1737,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1633,6 +1748,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1654,6 +1770,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1664,6 +1781,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1674,6 +1792,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1695,6 +1814,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1705,6 +1825,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1715,6 +1836,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1744,6 +1866,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1754,6 +1877,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1764,6 +1888,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1785,6 +1910,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1795,6 +1921,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1805,6 +1932,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1826,6 +1954,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1836,6 +1965,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1846,6 +1976,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1875,6 +2006,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1885,6 +2017,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1895,6 +2028,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1916,6 +2050,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1926,6 +2061,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1936,6 +2072,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -1957,6 +2094,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -1967,6 +2105,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -1977,6 +2116,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2006,6 +2146,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2016,6 +2157,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2026,6 +2168,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2047,6 +2190,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2057,6 +2201,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2067,6 +2212,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2088,6 +2234,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2098,6 +2245,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2108,6 +2256,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2137,6 +2286,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2147,6 +2297,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2157,6 +2308,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2178,6 +2330,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2188,6 +2341,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2198,6 +2352,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2219,6 +2374,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2229,6 +2385,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2239,6 +2396,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2268,6 +2426,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2278,6 +2437,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2288,6 +2448,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2309,6 +2470,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2319,6 +2481,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2329,6 +2492,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2350,6 +2514,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2360,6 +2525,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2370,6 +2536,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2399,6 +2566,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2409,6 +2577,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2419,6 +2588,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2440,6 +2610,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2450,6 +2621,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2460,6 +2632,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2481,6 +2654,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2491,6 +2665,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2501,6 +2676,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2530,6 +2706,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2540,6 +2717,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2550,6 +2728,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2571,6 +2750,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2581,6 +2761,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2591,6 +2772,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2612,6 +2794,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	
 }
 
 layer {
@@ -2622,6 +2805,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	
 }
 
 layer {
@@ -2632,6 +2816,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	
 }
 
 layer {
@@ -2781,128 +2966,5 @@ layer {
 		kernel_size: 14
 		stride: 1
 		pool: MAX
-	}
-}
-
-
-layer {
-	name: "appended_conv1"
-	type: "Convolution"
-	bottom: "pool5"
-	top: "appended_conv1"
-	convolution_param {
-		num_output: 512
-		kernel_size: 1
-		stride: 1
-		weight_filler {
-	  		type: "xavier"
-		}
-		bias_filler {
-	  		type: "constant"
-		}
-	}
-}
-
-layer {
-	name: "appended_deconv1"
-	type: "Deconvolution"
-	bottom: "appended_conv1"
-	top: "appended_deconv1"
-	convolution_param {
-		num_output: 256
-		pad: 1
-		stride: 3
-		kernel_size: 5
-		group: 1
-		weight_filler {
-	  		type: "xavier"
-		}
-		bias_filler {
-	  		type: "constant"
-		}
-	}
-}
-
-layer {
-  name: "appended_relu1"
-  type: "ReLU"
-  bottom: "appended_deconv1"
-  top: "appended_deconv1"
-}
-
-
-layer {
-	name: "appended_deconv2"
-	type: "Deconvolution"
-	bottom: "appended_deconv1"
-	top: "appended_deconv2"
-	convolution_param {
-		num_output: 64
-		pad: 1
-		stride: 3
-		kernel_size: 5
-		group: 1
-		weight_filler {
-	  		type: "xavier"
-		}
-		bias_filler {
-	  		type: "constant"
-		}
-	}
-}
-
-layer {
-  name: "appended_relu2"
-  type: "ReLU"
-  bottom: "appended_deconv2"
-  top: "appended_deconv2"
-}
-
-
-layer {
-	name: "appended_deconv3"
-	type: "Deconvolution"
-	bottom: "appended_deconv2"
-	top: "appended_deconv3"
-	convolution_param {
-		num_output: 16
-		pad: 2
-		stride: 4
-		kernel_size: 4
-		group: 1
-		weight_filler {
-	  		type: "xavier"
-		}
-		bias_filler {
-	  		type: "constant"
-		}
-	}
-}
-
-layer {
-  name: "appended_relu3"
-  type: "ReLU"
-  bottom: "appended_deconv3"
-  top: "appended_deconv3"
-}
-
-
-layer {
-	name: "appended_deconv4"
-	type: "Deconvolution"
-	bottom: "appended_deconv3"
-	top: "appended_deconv4"
-	convolution_param {
-		num_output: 3
-		pad: 0
-		stride: 4
-		kernel_size: 4
-		group: 1
-		weight_filler {
-	  		type: "xavier"
-		}
-		bias_filler {
-	  		type: "constant"
-		}
 	}
 }
