@@ -22,9 +22,22 @@ class Model:
 
 		self.net = caffe.Net(self.CNN_NETWORK_PATH, self.CAFFEMODEL_PATH, caffe.TRAIN)
 
+	
+	def display_stats(self):
+		print("Network layers information:")
+		for name, layer in zip(self.net._layer_names, self.net.layers):
+		    print("{:<7}: {:17s}({} blobs)".format(name, layer.type, len(layer.blobs)))
+		print("Network blobs information:")
+		for name, blob in self.net.blobs.items():
+		    print("{:<7}: {}".format(name, blob.data.shape))
+		print('self.net.inputs:', self.net.inputs)
+		print('self.net.outputs:', self.net.outputs)
+	
 
 	def train(self):
-		pass
+		solver = caffe.get_solver(self.CNN_SOLVER_PATH)
+		self.display_stats(self.net)
+		solver.solve()
 
 
 def main():
