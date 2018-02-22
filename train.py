@@ -23,7 +23,7 @@ class Model:
 		self.net = caffe.Net(self.CNN_NETWORK_PATH, self.CAFFEMODEL_PATH, caffe.TRAIN)
 
 	
-	def display_stats(self):
+	def display_net_stats(self):
 		print("Network layers information:")
 		for name, layer in zip(self.net._layer_names, self.net.layers):
 		    print("{:<7}: {:17s}({} blobs)".format(name, layer.type, len(layer.blobs)))
@@ -36,17 +36,17 @@ class Model:
 
 	def train(self):
 		solver = caffe.get_solver(self.CNN_SOLVER_PATH)
-		self.display_stats(self.net)
+		self.display_net_stats()
 		solver.solve()
 
 
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
-	CNN_NETWORK_PATH = 'ResNet-101-deploy.prototxt'		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
-	CNN_SOLVER_PATH = ''
+	CNN_NETWORK_PATH = 'ResNet-101-train.prototxt'		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
+	CNN_SOLVER_PATH = 'ResNet-101-solver.prototxt'
 	CAFFEMODEL_PATH =  'G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel'
 
-	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
+	model = Model(CNN_NETWORK_PATH, CNN_SOLVER_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
 	model.train()
 
 
