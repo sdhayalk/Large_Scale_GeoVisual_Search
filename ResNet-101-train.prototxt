@@ -26,6 +26,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -36,6 +37,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -46,6 +48,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -65,6 +68,7 @@ layer {
 		stride: 2
 		pool: MAX
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -79,6 +83,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -89,6 +94,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -99,6 +105,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -113,6 +120,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -123,6 +131,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -133,6 +142,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -154,6 +164,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -164,6 +175,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -174,6 +186,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -195,6 +208,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -205,6 +219,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -215,6 +230,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -223,6 +239,7 @@ layer {
 	top: "res2a"
 	name: "res2a"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -244,6 +261,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -254,6 +272,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -264,6 +283,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -285,6 +305,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -295,6 +316,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -305,6 +327,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -326,6 +349,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -336,6 +360,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -346,6 +371,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -354,6 +380,7 @@ layer {
 	top: "res2b"
 	name: "res2b"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -375,6 +402,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -385,6 +413,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -395,6 +424,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -416,6 +446,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -436,6 +467,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -457,6 +489,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -467,6 +500,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -477,6 +511,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -485,6 +520,8 @@ layer {
 	top: "res2c"
 	name: "res2c"
 	type: "Eltwise"
+	param { lr_mult: 0 }
+
 }
 
 layer {
@@ -506,6 +543,8 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	param { lr_mult: 0 }
+
 }
 
 layer {
@@ -516,6 +555,8 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
+
 }
 
 layer {
@@ -526,6 +567,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -540,6 +582,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -550,6 +593,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -560,6 +604,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -581,6 +626,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -591,6 +637,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -601,6 +648,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -622,6 +670,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -632,6 +681,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -642,6 +692,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -650,6 +701,7 @@ layer {
 	top: "res3a"
 	name: "res3a"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -671,6 +723,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -681,6 +734,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -691,6 +745,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -712,6 +767,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -722,6 +778,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -732,6 +789,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -753,6 +811,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -763,6 +822,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -773,6 +833,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -781,6 +842,7 @@ layer {
 	top: "res3b1"
 	name: "res3b1"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -802,6 +864,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -812,6 +875,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -822,6 +886,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -843,6 +908,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -853,6 +919,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -863,6 +930,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -884,6 +952,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -894,6 +963,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -904,6 +974,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -912,6 +983,7 @@ layer {
 	top: "res3b2"
 	name: "res3b2"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -933,6 +1005,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -943,6 +1016,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -953,6 +1027,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -974,6 +1049,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -984,6 +1060,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -994,6 +1071,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1015,6 +1093,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1025,6 +1104,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1035,6 +1115,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1043,6 +1124,7 @@ layer {
 	top: "res3b3"
 	name: "res3b3"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1064,6 +1146,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1074,6 +1157,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1084,6 +1168,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1098,6 +1183,7 @@ layer {
 		stride: 2
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1108,6 +1194,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1118,6 +1205,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1139,6 +1227,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1149,6 +1238,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1159,6 +1249,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1180,6 +1271,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1190,6 +1282,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1200,6 +1293,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1208,6 +1302,7 @@ layer {
 	top: "res4a"
 	name: "res4a"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1229,6 +1324,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1239,6 +1335,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1249,6 +1346,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1270,6 +1368,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1280,6 +1379,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1290,6 +1390,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1311,6 +1412,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1321,6 +1423,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1331,6 +1434,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1339,6 +1443,7 @@ layer {
 	top: "res4b1"
 	name: "res4b1"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1360,6 +1465,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1370,6 +1476,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1380,6 +1487,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1401,6 +1509,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1411,6 +1520,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1421,6 +1531,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1442,6 +1553,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1452,6 +1564,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1462,6 +1575,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1470,6 +1584,7 @@ layer {
 	top: "res4b2"
 	name: "res4b2"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1491,6 +1606,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1501,6 +1617,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1511,6 +1628,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1532,6 +1650,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1542,6 +1661,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1552,6 +1672,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1573,6 +1694,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1583,6 +1705,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1593,6 +1716,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1601,6 +1725,7 @@ layer {
 	top: "res4b3"
 	name: "res4b3"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1622,6 +1747,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1632,6 +1758,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1642,6 +1769,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1663,6 +1791,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1673,6 +1802,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1683,6 +1813,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1704,6 +1835,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1714,6 +1846,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1724,6 +1857,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1732,6 +1866,7 @@ layer {
 	top: "res4b4"
 	name: "res4b4"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1753,6 +1888,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1763,6 +1899,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1773,6 +1910,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1794,6 +1932,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1804,6 +1943,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1814,6 +1954,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1835,6 +1976,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1845,6 +1987,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1855,6 +1998,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1863,6 +2007,7 @@ layer {
 	top: "res4b5"
 	name: "res4b5"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1884,6 +2029,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1894,6 +2040,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1904,6 +2051,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1925,6 +2073,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1935,6 +2084,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1945,6 +2095,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1966,6 +2117,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1976,6 +2128,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1986,6 +2139,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -1994,6 +2148,7 @@ layer {
 	top: "res4b6"
 	name: "res4b6"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2015,6 +2170,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2025,6 +2181,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2035,6 +2192,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2056,6 +2214,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2066,6 +2225,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2076,6 +2236,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2097,6 +2258,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2107,6 +2269,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2117,6 +2280,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2125,6 +2289,7 @@ layer {
 	top: "res4b7"
 	name: "res4b7"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2146,6 +2311,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2156,6 +2322,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2166,6 +2333,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2187,6 +2355,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2197,6 +2366,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2207,6 +2377,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2228,6 +2399,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2238,6 +2410,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2248,6 +2421,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2256,6 +2430,7 @@ layer {
 	top: "res4b8"
 	name: "res4b8"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2277,6 +2452,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2287,6 +2463,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2297,6 +2474,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2318,6 +2496,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2328,6 +2507,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2338,6 +2518,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2359,6 +2540,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2369,6 +2551,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2379,6 +2562,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2387,6 +2571,7 @@ layer {
 	top: "res4b9"
 	name: "res4b9"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2408,6 +2593,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2418,6 +2604,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2428,6 +2615,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2449,6 +2637,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2459,6 +2648,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2469,6 +2659,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2490,6 +2681,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2500,6 +2692,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2510,6 +2703,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2518,6 +2712,7 @@ layer {
 	top: "res4b10"
 	name: "res4b10"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2539,6 +2734,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2549,6 +2745,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2559,6 +2756,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2580,6 +2778,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2590,6 +2789,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2600,6 +2800,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2621,6 +2822,7 @@ layer {
 		stride: 1
 		bias_term: false
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2631,6 +2833,7 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2641,6 +2844,7 @@ layer {
 	scale_param {
 		bias_term: true
 	}
+	param { lr_mult: 0 }
 }
 
 layer {
@@ -2649,6 +2853,7 @@ layer {
 	top: "res4b11"
 	name: "res4b11"
 	type: "Eltwise"
+	param { lr_mult: 0 }
 }
 
 layer {
