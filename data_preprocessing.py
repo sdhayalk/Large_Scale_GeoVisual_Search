@@ -71,6 +71,8 @@ def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
 				print(file_name)
 				image_name = data_dir + os.sep + data_folder_name + os.sep + file_name
 				image = np.array(Image.open(image_name))
+				image = image - 112.0
+				image = image / 255.0
 				dataset_train.append(image)
 
 	dataset_train_features = np.array(dataset_train).reshape((len(dataset_train), 3, 224, 224))

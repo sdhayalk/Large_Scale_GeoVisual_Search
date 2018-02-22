@@ -2915,3 +2915,11 @@ layer {
 		}
 	}
 }
+
+layer {
+	name: "loss"
+	type: "EuclideanLossLayer"
+	bottom: "appended_deconv4"
+	bottom: "label"
+	top: "loss"
+}
