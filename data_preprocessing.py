@@ -65,7 +65,7 @@ def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
 	dataset_train_features = []
 	dataset_train_labels = []
 
-	for data_folder_name in os.listdir(data_dir)[0:3]:
+	for data_folder_name in os.listdir(data_dir)[1:4]:
 		print('In folder', data_folder_name)
 		for file_name in os.listdir(data_dir + os.sep + data_folder_name)[0:5]:
 			if '.jpg' in file_name:
@@ -73,11 +73,11 @@ def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
 				image = np.array(Image.open(image_name))
 				gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-				image = image - 112.0
+				# image = image - 112.0
 				image = image / 255.0
-				gray_image = gray_image - 112.0
+				# gray_image = gray_image - 112.0
 				gray_image = gray_image / 255.0
-
+				print(image)
 				dataset_train_labels.append(gray_image)
 
 				image = cv2.resize(image, (224, 224))

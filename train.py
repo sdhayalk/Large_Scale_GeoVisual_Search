@@ -20,7 +20,7 @@ class Model:
 		else:
 			caffe.set_mode_cpu()
 
-		self.net = caffe.Net(self.CNN_NETWORK_PATH, self.CAFFEMODEL_PATH, caffe.TRAIN)
+		self.net = caffe.Net(self.CNN_NETWORK_PATH, caffe.TRAIN)
 
 	
 	def display_net_stats(self):
@@ -42,9 +42,9 @@ class Model:
 
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
-	CNN_NETWORK_PATH = 'ResNet-101-train.prototxt'		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
-	CNN_SOLVER_PATH = 'ResNet-101-solver.prototxt'
-	CAFFEMODEL_PATH =  'G:/DL/large_scale_geovisual_search/models/ResNet-101-model.caffemodel'
+	CNN_NETWORK_PATH = 'ResNet-50-train.prototxt'		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
+	CNN_SOLVER_PATH = 'ResNet-50-solver.prototxt'
+	CAFFEMODEL_PATH =  'G:/DL/large_scale_geovisual_search/models/ResNet-50-model.caffemodel'
 
 	model = Model(CNN_NETWORK_PATH, CNN_SOLVER_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
 	model.train()

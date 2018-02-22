@@ -76,8 +76,8 @@ class Model:
 
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
-	CNN_NETWORK_PATH = "ResNet-101-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
-	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/snapshot_iter_90.caffemodel"
+	CNN_NETWORK_PATH = "ResNet-50-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
+	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/snapshot_iter_4200.caffemodel"
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
 	model.test(8)
