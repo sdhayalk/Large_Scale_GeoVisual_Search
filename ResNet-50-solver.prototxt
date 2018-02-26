@@ -18,7 +18,7 @@ display: 10
 max_iter: 10000
 
 # snapshot intermediate results
-snapshot: 100
+snapshot: 1000
 snapshot_prefix: "G:/DL/mnist_data_for_caffe/snapshot"
 
 # solver mode: CPU or GPU

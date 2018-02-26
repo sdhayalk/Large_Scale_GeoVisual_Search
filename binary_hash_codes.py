@@ -25,7 +25,6 @@ class Model:
 	def read_image_from_path(self, image_path):
 		image = np.array(Image.open(image_path))
 		image = cv2.resize(image, (224, 224))
-		image = image - 112.0
 		image = image / 255.0
 		return image.reshape(3, 224, 224)
 
@@ -50,16 +49,16 @@ class Model:
 						if batch_counter == batch_size:
 							batch_image = np.array(batch_image)
 							output = self.net.forward(data=batch_image)
-							output = np.array(output['pool5'])
-							print(output)
-							# for arr in output:
-								# print(arr)
-							# print(output.shape)
+							output = np.array(output['prob'])
+							print(output.shape)
+							for arr in output:
+								print(arr)
+							print(output.shape)
 
 							for i in range(0, len(output)):
 								code = ""
 								for arr in output[i]:
-									if arr[0][0] >= 0.5:
+									if arr >= 0.5:
 										code = code + '1'
 									else:
 										code = code + '0'
@@ -77,7 +76,7 @@ class Model:
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	CNN_NETWORK_PATH = "ResNet-50-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
-	CAFFEMODEL_PATH =  "G:/DL/large_scale_geovisual_search/models/snapshot_iter_4200.caffemodel"
+	CAFFEMODEL_PATH =  "G:/DL/satellite_imagery_land_classification/data/snapshot_iter_6327.caffemodel"
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
 	model.test(8)

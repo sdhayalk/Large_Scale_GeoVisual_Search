@@ -10,7 +10,7 @@ layer {
   }
   hdf5_data_param {
     source: "G:/DL/large_scale_geovisual_search/Large_Scale_GeoVisual_Search/dataset_train.txt"
-    batch_size: 1
+    batch_size: 6
   }
 }
 
