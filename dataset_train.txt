@@ -1,1 +1,0 @@
-G:/DL/large_scale_geovisual_search/data/dataset_train.hdf5
