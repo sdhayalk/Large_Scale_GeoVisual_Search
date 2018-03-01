@@ -61,46 +61,16 @@ class GeotiffImageManipulator:
 					os.remove(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
 
 
-def convert_to_HDF5(hdf5_train_filename, data_dir, length_offset):
-	dataset_train_features = []
-	dataset_train_labels = []
-
-	for data_folder_name in os.listdir(data_dir)[1:4]:
-		print('In folder', data_folder_name)
-		for file_name in os.listdir(data_dir + os.sep + data_folder_name)[0:5]:
-			if '.jpg' in file_name:
-				image_name = data_dir + os.sep + data_folder_name + os.sep + file_name
-				image = np.array(Image.open(image_name))
-				gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-				# image = image - 112.0
-				image = image / 255.0
-				# gray_image = gray_image - 112.0
-				gray_image = gray_image / 255.0
-				print(image)
-				dataset_train_labels.append(gray_image)
-
-				image = cv2.resize(image, (224, 224))
-				dataset_train_features.append(image)
-
-	dataset_train_features = np.array(dataset_train_features).reshape((len(dataset_train_features), 3, 224, 224))
-	dataset_train_labels = np.array(dataset_train_labels).reshape((len(dataset_train_labels), 1, length_offset, length_offset))
-	
-	with h5py.File(hdf5_train_filename, 'w') as f:
-		f['data'] = dataset_train_features
-		f['label'] = dataset_train_labels
-
-
 def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	length_offset = 128
 
 	geotiff_image_manipulator_instance = GeotiffImageManipulator(DATA_DIR)
+
+	# following lines are commented because they are already computed in my system
 	# geotiff_image_manipulator_instance.delete_images()
 	# geotiff_image_manipulator_instance.divide(length_offset=length_offset)
 
-	DATASET_TRAIN_HDF5_PATH = DATA_DIR + os.sep + 'dataset_train.hdf5'
-	convert_to_HDF5(DATASET_TRAIN_HDF5_PATH, DATA_DIR, length_offset)
 
 if __name__ == '__main__':
 	main()
