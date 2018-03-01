@@ -30,10 +30,10 @@ def search_test(BINARY_CODES_TXT_PATH, number):
 	search_result_distance, search_result_file_name = (list(x) for x in zip(*sorted(zip(search_result_distance, search_result_file_name), key=lambda pair: pair[0])))
 
 	print("Query image: ", query_image)
-	for i in range(0, len(search_result_distance)):
+	for i in range(0, 10):
 		print(search_result_distance[i], search_result_file_name[i])
 
 
-BINARY_CODES_TXT_PATH = 'G:/DL/large_scale_geovisual_search/Large_Scale_GeoVisual_Search/binary_codes.txt'
+BINARY_CODES_TXT_PATH = 'G:/DL/large_scale_geovisual_search/binary_codes.txt'
 number = 0
 search_test(BINARY_CODES_TXT_PATH, number)

@@ -29,8 +29,8 @@ class Model:
 		return image.reshape(3, 224, 224)
 
 
-	def test(self, batch_size):
-		with open('binary_codes.txt','w') as f:
+	def test(self, batch_size, binary_codes_txt_path):
+		with open(binary_codes_txt_path,'w') as f:
 			for data_folder_name in self.data_folders_list[1:]:
 				files = os.listdir(self.DATA_DIR + os.sep + data_folder_name)
 				print('forward pass of .jpg files in folder', data_folder_name)
@@ -39,7 +39,7 @@ class Model:
 				batch_image = []
 				batch_file = []
 
-				for file in files[0:12]:
+				for file in files[:2000]:
 					if '.jpg' in file:
 						image = self.read_image_from_path(self.DATA_DIR + os.sep + data_folder_name + os.sep + file)
 						batch_image.append(image)
@@ -50,10 +50,6 @@ class Model:
 							batch_image = np.array(batch_image)
 							output = self.net.forward(data=batch_image)
 							output = np.array(output['prob'])
-							print(output.shape)
-							for arr in output:
-								print(arr)
-							print(output.shape)
 
 							for i in range(0, len(output)):
 								code = ""
@@ -77,9 +73,10 @@ def main():
 	DATA_DIR = 'G:/DL/large_scale_geovisual_search/data'
 	CNN_NETWORK_PATH = "ResNet-50-deploy.prototxt"		# for visualization, go to http://ethereon.github.io/netscope/#/gist/b21e2aae116dc1ac7b50
 	CAFFEMODEL_PATH =  "G:/DL/satellite_imagery_land_classification/data/snapshot_iter_6327.caffemodel"
+	binary_codes_txt_path = 'G:/DL/large_scale_geovisual_search/binary_codes.txt'
 
 	model = Model(CNN_NETWORK_PATH, CAFFEMODEL_PATH, DATA_DIR, USE_GPU=True)
-	model.test(8)
+	model.test(8, binary_codes_txt_path)
 
 
 if __name__ == '__main__':
