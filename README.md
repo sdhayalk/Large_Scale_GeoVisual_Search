@@ -5,4 +5,4 @@ Implementing image visual similarity searching and indexing in NAIP GIS satellit
 
 Further aim to parallelize searching across multiple nodes in AWS cluster using Hadoop/Spark.
 
-Project not yet completed.
+Project is onging and is not yet completed.
